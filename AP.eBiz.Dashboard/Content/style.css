@@ -1,0 +1,88 @@
+﻿body
+{
+    font-family: Arial;
+    font-size: small;
+}
+
+.field-validation-error
+{
+    background-image: url('/Content/images/error.png');
+    background-repeat: no-repeat;
+    color: Red;
+    background-size: 16px 16px;
+    padding: 0 0 0 20px;
+}
+
+.input-validation-error
+{
+    background: pink;
+    border: 1px solid red;
+}
+
+.login-form-container
+{
+    width:500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.login-form-container .header
+{
+    width: 500px;
+    margin-left: 150px;
+}
+
+.login-form-container form 
+{
+    width: 500px;
+    padding: 20px;
+    border: 1px solid #c0c0c0;
+    
+    /*** Rounded Corners ***/
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    
+    /*** Background Gradient - 2 declarations one for Firefox and one for Webkit ***/
+    background:  -moz-linear-gradient(19% 75% 90deg, #FFFFFF, #d0d0d0);
+    background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#d0d0d0), to(#FFFFFF)); 
+    
+    /*** Shadow behind the box ***/
+    -moz-box-shadow:0px -1px 70px #f0f0f0;
+    -webkit-box-shadow:0px -1px 70px #f0f0f0;    
+}
+
+.login-form-container input
+{
+    width: 230px;
+    padding: 6px;
+    margin-bottom: 10px;
+    border-top: 1px solid #d0d0d0;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+        
+    /*** Transition Selectors - What properties to animate and how long ***/
+    -webkit-transition-property: -webkit-box-shadow, background;
+    -webkit-transition-duration: 0.25s;
+ 
+    /*** Adding a small shadow ***/
+    -moz-box-shadow: 0px 0px 2px #000;
+    -webkit-box-shadow: 0px 0px 2px #000;    
+}
+
+.login-form-container input:hover
+{
+    -webkit-box-shadow: 0px 0px 4px #000;
+    background: #efefff;
+}
+
+.login-form-container fieldset
+{
+    padding: 20px 20px 20px 20px;
+}
+
+.validation-line
+{
+    padding: 0 0 10px 0;
+}
