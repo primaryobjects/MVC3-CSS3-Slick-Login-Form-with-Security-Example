@@ -1,0 +1,49 @@
+﻿body
+{
+    font-family: Arial;
+    font-size: small;
+}
+
+.field-validation-error
+{
+    background-image: url('/Content/images/error.png');
+    background-repeat: no-repeat;
+    color: Red;
+    background-size: 16px 16px;
+	padding: 3px 0 0 22px;
+}
+
+.input-validation-error
+{
+    background: pink;
+    border: 1px solid red;
+}
+
+.login-form-container
+{
+    width:500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.login-form-container .header
+{
+    width: 500px;
+    margin-left: 150px;
+}
+
+.login-form-container fieldset
+{
+    padding: 20px 20px 20px 20px;
+}
+
+.login-form-container .editor-label
+{
+	padding: 0 0 3px 0;
+}
+
+.validation-line
+{
+    padding: 0 0 10px 0;
+}

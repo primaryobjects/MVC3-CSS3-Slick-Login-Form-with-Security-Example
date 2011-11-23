@@ -1,0 +1,15 @@
+﻿.login-form-container form 
+{
+    width: 500px;
+    padding: 20px;
+    border: 1px solid #c0c0c0;
+    filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#d0d0d0', endColorstr='#ffffff'); /* IE6 & IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#d0d0d0', endColorstr='#ffffff')"; /* IE8 */    
+}
+
+.login-form-container input
+{
+    width: 230px;
+    padding: 6px;
+    margin-bottom: 10px;      
+}
