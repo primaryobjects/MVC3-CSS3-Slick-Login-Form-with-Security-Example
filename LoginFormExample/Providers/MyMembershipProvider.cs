@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
+using System.Web.Caching;
 
 namespace LoginFormExample.Providers
 {
@@ -77,11 +78,6 @@ namespace LoginFormExample.Providers
             throw new NotImplementedException();
         }
 
-        public override MembershipUser GetUser(string username, bool userIsOnline)
-        {
-            throw new NotImplementedException();
-        }
-
         public override MembershipUser GetUser(object providerUserKey, bool userIsOnline)
         {
             throw new NotImplementedException();
@@ -149,16 +145,42 @@ namespace LoginFormExample.Providers
 
         #endregion
 
+        /// <summary>
+        /// Authenticates the user.
+        /// </summary>
+        /// <param name="username">Username, for testing use: testuser</param>
+        /// <param name="password">Password, for testing use: password</param>
+        /// <returns>bool</returns>
         public override bool ValidateUser(string username, string password)
         {
             if (username == "testuser" && password == "password")
             {
+                // Simulate a user id.
+                int userId = new Random().Next(1, 100);
+
+                // Add the user details to cache, for quick retrieval later.
+                HttpContext.Current.Cache.Add(username, new MyMembershipUser(userId, username), null, Cache.NoAbsoluteExpiration, FormsAuthentication.Timeout, CacheItemPriority.Default, null);
+
                 return true;
             }
             else
             {
                 return false;
             }
+        }
+
+        /// <summary>
+        /// Retrieves the user details for a particular user.
+        /// </summary>
+        /// <param name="username">User to retrieve user details for</param>
+        /// <param name="userIsOnline"></param>
+        /// <returns>MembershipUser</returns>
+        public override MembershipUser GetUser(string username, bool userIsOnline)
+        {
+            // Retrieve the user details from cache.
+            MyMembershipUser membershipUser = (MyMembershipUser)HttpContext.Current.Cache.Get(username);
+
+            return membershipUser;
         }
     }
 }

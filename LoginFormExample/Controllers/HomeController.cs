@@ -60,6 +60,9 @@ namespace LoginFormExample.Controllers
 
         public ActionResult LogOff()
         {
+            // Delete the user details from cache.
+            System.Web.HttpContext.Current.Cache.Remove(User.Identity.Name);
+
             // Delete the authentication ticket and sign out.
             FormsAuthentication.SignOut();
 
