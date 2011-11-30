@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using AP.eBiz.Dashboard.Attributes;
+using LoginFormExample.Attributes;
 
-namespace AP.eBiz.Dashboard.Filters
+namespace LoginFormExample.Filters
 {
     public sealed class LogonAuthorize : AuthorizeAttribute
     {

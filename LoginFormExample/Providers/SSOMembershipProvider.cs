@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 
-namespace AP.eBiz.Dashboard.Providers
+namespace LoginFormExample.Providers
 {
     public class SSOMembershipProvider : MembershipProvider
     {

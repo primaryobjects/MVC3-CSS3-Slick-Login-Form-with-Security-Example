@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AP.eBiz.Dashboard", "AP.eBiz.Dashboard\AP.eBiz.Dashboard.csproj", "{D24A3D3B-CE23-472B-AC15-C2B012A4CCD5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginFormExample", "LoginFormExample\LoginFormExample.csproj", "{D24A3D3B-CE23-472B-AC15-C2B012A4CCD5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
