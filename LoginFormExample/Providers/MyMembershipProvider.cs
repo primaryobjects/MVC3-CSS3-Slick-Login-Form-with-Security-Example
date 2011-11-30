@@ -6,7 +6,7 @@ using System.Web.Security;
 
 namespace LoginFormExample.Providers
 {
-    public class SSOMembershipProvider : MembershipProvider
+    public class MyMembershipProvider : MembershipProvider
     {
         #region Unused Methods
 

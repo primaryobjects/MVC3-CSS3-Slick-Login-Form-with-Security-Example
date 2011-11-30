@@ -68,12 +68,13 @@
     <Compile Include="Models\DashboardModel.cs" />
     <Compile Include="Models\LogOnModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Providers\SSOMembershipProvider.cs" />
+    <Compile Include="Providers\MyMembershipProvider.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\style-ie.css" />
+    <Content Include="Content\css\style-login-ie.css" />
+    <Content Include="Content\css\style-login.css" />
+    <Content Include="Content\css\style.css" />
     <Content Include="Content\images\error.png" />
-    <Content Include="Content\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
