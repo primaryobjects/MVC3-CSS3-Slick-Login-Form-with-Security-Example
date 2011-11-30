@@ -60,12 +60,12 @@
   <ItemGroup>
     <Compile Include="Attributes\AllowAnonymousAttribute.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\SecureController.cs" />
     <Compile Include="Filters\LogonAuthorize.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\DashboardModel.cs" />
+    <Compile Include="Models\SecureModel.cs" />
     <Compile Include="Models\LogOnModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\MyMembershipProvider.cs" />
@@ -99,7 +99,7 @@
     <Content Include="Views\Controls\UserMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Secure\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Index.cshtml" />

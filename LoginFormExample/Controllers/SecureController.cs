@@ -7,7 +7,7 @@ using LoginFormExample.Models;
 
 namespace LoginFormExample.Controllers
 {
-    public class DashboardController : Controller
+    public class SecureController : Controller
     {
         public ActionResult Index()
         {

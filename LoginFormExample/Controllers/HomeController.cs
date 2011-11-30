@@ -14,10 +14,10 @@ namespace LoginFormExample.Controllers
         [AllowAnonymous]
         public ActionResult Index()
         {
-            // If user has already logged in, redirect to the dashboard.
+            // If user has already logged in, redirect to the secure area.
             if (Request.IsAuthenticated)
             {
-                return RedirectToAction("Index", "Dashboard");
+                return RedirectToAction("Index", "Secure");
             }
             else
             {
@@ -38,7 +38,7 @@ namespace LoginFormExample.Controllers
                     // Create the authentication ticket.
                     FormsAuthentication.SetAuthCookie(model.Username, false);
 
-                    // Redirect to the dashboard.
+                    // Redirect to the secure area.
                     if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
                         && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
                     {
@@ -46,7 +46,7 @@ namespace LoginFormExample.Controllers
                     }
                     else
                     {
-                        return RedirectToAction("Index", "Dashboard");
+                        return RedirectToAction("Index", "Secure");
                     }
                 }
                 else

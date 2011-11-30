@@ -5,7 +5,7 @@ using System.Web;
 
 namespace LoginFormExample.Models
 {
-    public class DashboardModel
+    public class SecureModel
     {
     }
 }
