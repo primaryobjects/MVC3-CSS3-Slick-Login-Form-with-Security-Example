@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Web.Security;
 using LoginFormExample.Filters;
 
 namespace LoginFormExample
@@ -37,6 +38,15 @@ namespace LoginFormExample
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+        }
+
+        protected void Application_AuthenticateRequest(object sender, EventArgs e)
+        {
+            // If the user is logged-in, make sure his cache details are still available, otherwise redirect to login page.
+            if (Request.IsAuthenticated && Membership.GetUser() == null)
+            {
+                FormsAuthentication.SignOut();
+            }
         }
     }
 }
